@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gentlemen's Haven</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./main.css/main.css">
+</head>
+<body>
+    <div class="contenedor">
+        <aside>
+            <header>
+                <h1 class="logo">Gentlemen's Haven</h1>
+            </header>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <button id="todos" class="boton__Menu boton__Categoria active"><i class="bi bi-arrow-right-circle-fill"></i> Todos los Productos</button>
+                    </li>
+                    <li>
+                        <button id="camisetas" class="boton__Menu boton__Categoria"><i class="bi bi-arrow-right-circle"></i> Camisetas</button>
+                    </li>
+                    <li>
+                        <button id="Pantalones" class="boton__Menu boton__Categoria"><i class="bi bi-arrow-right-circle"></i> Pantalones</button>
+                    </li>
+                    <li>
+                        <button id="Zapatos" class="boton__Menu boton__Categoria"> <i class="bi bi-arrow-right-circle"></i>Zapatos</button>
+                    </li>
+                    <li>
+                        <a class="boton__Menu boton__Carrito" href="./carrito.html">
+                            <i class="bi bi-cart4"></i> Carrito <span id="numerito" class="numerito">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <footer>
+                <p class="texto__Footer">© 2023 Gentlemen's Haven</p>
+            </footer>
+        </aside>
+        <main>
+            <h2 id="titulo__Principal" class="titulo__Principal active">Todos los Productos</h2>
+            <div id="contenedor__Productos"  class="contenedor__Productos">
+                <!-- Esto se va  acompletar automáticamente con el JS --> 
+            </div>
+        </main>
+    </div>
+
+
+
+    <script src="./JavaScript/carrito.js"></script>
+    <script src="./JavaScript/main.js"></script>
+</body>
+</html>
+
