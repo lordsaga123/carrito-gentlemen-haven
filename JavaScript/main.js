@@ -1,4 +1,4 @@
-/* PRODUCTOS*/
+// PRODUCTOS
 const productos = [
     /*CAMISETAS*/
     {
@@ -84,7 +84,7 @@ const productos = [
       
     // PANTALONES
   
-     {
+    {
         ID: "Pantalon-01",
         titulo: "Pantalon 01",
         imagen: "./Images/Pantalones/01.jpg",
@@ -166,7 +166,7 @@ const productos = [
       },
       // ZAPATOS
   
-     {
+    {
         ID: "Zapato-01",
         titulo: "Zapato 01",
         imagen: "./Images/Zapatos/01.jpg",
@@ -312,9 +312,38 @@ function actualizarBotonesAgregar (){
     
 }
 
-const productosEnCarrito = [];
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos__En__Carrito");
+
+if(productosEnCarritoLS){
+  productosEnCarrito = JSON.parse(productosEnCarritoLS);
+  actualizarNumerito();
+} else {
+  productosEnCarrito = []
+};
 
 function agregarAlCarrito(e){
+  
+  Toastify({
+    text: "Agregado al Carrito Exitosamente",
+    duration: 3000,
+    close: false,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #011627, #86c8f1)",
+      borderRadius: '2rem'
+    },
+    offset: {
+        x: '2rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+        y: '2rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+      },
+    onClick: function(){} // Callback after click
+  }).showToast();
+
+
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.ID === idBoton);
 
